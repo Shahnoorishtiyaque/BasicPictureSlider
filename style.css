@@ -113,7 +113,6 @@ button {
         background-color: rgba(0, 0, 0, 0.5);
     }
       .main:hover{
-    height: 375px;
-    width: 250px;
+      display:none;
 }
 }
