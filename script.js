@@ -68,3 +68,8 @@ function checkleft() {
         }
     }
 }
+
+setInterval(() => {
+    checkRight()
+
+},4000);
