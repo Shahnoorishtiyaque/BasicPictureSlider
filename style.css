@@ -3,6 +3,13 @@
     margin: 0;
 }
 
+:root{
+    --themeColor: red;
+    --secondaryTheme: white;
+    --extra:rgba(0, 0, 0);
+
+}
+
 body {
     height: 100vh;
     width: 100vw;
@@ -19,7 +26,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 40px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -34,23 +41,29 @@ body {
 }
 
 .main {
-    height: 600px;
-    width: 400px;
-    border: 10px solid rgb(255, 255, 255);
+    height: 510px;
+    width: 360px;
+    border: 5px solid var(--secondaryTheme);
     border-radius: 25px;
     position: relative;
     overflow: hidden;
 }
 
-img {
+.main img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    position: absolute;
+    ;
 
+}
+.nameBox img{
+    position: absolute;
+    width: 80%;
+    object-fit: cover;
 }
 
 .box {
-    /* background-color: rgba(145, 133, 133, 0.353); */
     height: 100%;
     width: 100%;
     position: absolute;
@@ -60,8 +73,11 @@ img {
 button {
     height: 50px;
     width: 50px;
-    background: rgb(255, 255, 255);
+    background: var(--themeColor);
     border-radius: 25px;
+}
+button img{
+    height: 100%;
 }
 
 .upper {
@@ -96,12 +112,38 @@ button {
 .bgc7 {
     background: url(pictures/07bg.jpeg);
 }
+.nameBox{
+    position: relative;
+    height: 80px;
+    width: 240px;
+    overflow: hidden;
+    display: flex;
+    align-items:center;
+}
+.charecter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.name{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:var(--extra);
+    border-radius: 40px;
+    
+    
+}
 
 @media (max-width:700px) and (max-height:750px){
     .main{
         height:300px;
         width: 200px;
-        border: 5px solid white;
+        border: 5px solid var(--secondaryTheme);
     }
     button{
         height: 25px;
@@ -110,7 +152,10 @@ button {
     }
     .bg{
         gap: 20px;
-        background-color: rgba(0, 0, 0, 0.5);
     }
-      
+.nameBox{
+    height: 40px;
+    width: 120px;
+}
+
 }
